@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Vault - Buy & Sell Video Games</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #1a1a2e;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #16213e, #0f3460);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e94560;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #e94560;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 5%;
+            background: linear-gradient(rgba(22, 33, 62, 0.9), rgba(15, 52, 96, 0.9)), url('');
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #e94560;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #ccc;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #e94560;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .btn:hover {
+            background: #d63852;
+            transform: translateY(-2px);
+        }
+
+        .games-section {
+            padding: 3rem 5%;
+        }
+
+        .games-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #e94560;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .game-card {
+            background: #16213e;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(233, 69, 96, 0.2);
+        }
+
+        .game-image {
+            width: 100%;
+            height: 200px;
+            background: #0f3460;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .game-info {
+            padding: 1.5rem;
+        }
+
+        .game-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .game-platform {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .game-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4ee44e;
+            margin-bottom: 1rem;
+        }
+
+        .buy-btn {
+            width: 100%;
+            padding: 0.7rem;
+            background: #4ee44e;
+            color: #1a1a2e;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: #3dd13d;
+        }
+
+        .contact-section {
+            padding: 3rem 5%;
+            background: #16213e;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 1.5rem;
+            color: #e94560;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+            color: #ccc;
+        }
+
+        footer {
+            background: #0f3460;
+            text-align: center;
+            padding: 1.5rem;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav a {
+                margin: 0 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">🎮 Game Vault</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#games">Games</a>
+            <a href="#sell">Sell Now</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Buy & Sell Video Games Easily</h1>
+        <p>Find great deals on your favorite games or sell your pre-loved ones directly to other gamers!</p>
+        <a href="#games" class="btn">Browse Games</a>
+    </section>
+
+    <!-- Games Section -->
+    <section class="games-section" id="games">
+        <h2>🎮 Available Games</h2>
+        <div class="games-grid">
+            <!-- Game Card 1 -->
+            <div class="game-card">
+                <div class="game-image">🎮</div>
+                <div class="game-info">
+                    <h3 class="game-title">Game Title Here</h3>
+                    <p class="game-platform">PlayStation 5</p>
+                    <p class="game-price">₱2,499</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Game Card 2 -->
+            <div class="game-card">
+                <div class="game-image">🕹️</div>
+                <div class="game-info">
+                    <h3 class="game-title">Game Title Here</h3>
+                    <p class="game-platform">Nintendo Switch</p>
+                    <p class="game-price">₱1,899</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Game Card 3 -->
+            <div class="game-card">
+                <div class="game-image">🖥️</div>
+                <div class="game-info">
+                    <h3 class="game-title">Game Title Here</h3>
+                    <p class="game-platform">PC / Steam</p>
+                    <p class="game-price">₱899</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Game Card 4 -->
+            <div class="game-card">
+                <div class="game-image">🎯</div>
+                <div class="game-info">
+                    <h3 class="game-title">Game Title Here</h3>
+                    <p class="game-platform">Xbox Series X</p>
+                    <p class="game-price">₱2,199</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sell Section -->
+    <section class="games-section" id="sell" style="background: #0f3460; text-align: center;">
+        <h2>📦 Want to Sell Your Games?</h2>
+        <p style="max-width: 600px; margin: 0 auto 2rem; color: #ccc;">Have games you no longer play? Send us a message with photos, game name, platform, and price — we'll help you sell it!</p>
+        <a href="#contact" class="btn">Message Us</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2>📬 Get In Touch</h2>
+        <div class="contact-info">
+            <p><strong>📧 Email:</strong> your-email@example.com</p>
+            <p><strong>📱 Facebook:</strong> facebook.com/yourpage</p>
+            <p><strong>💬 GCash/Payment:</strong> We accept GCash, PayPal, and Bank Transfer</p>
+            <p><strong>📍 Location:</strong> Iloilo, Philippines</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Game Vault. All rights reserved. Buy & sell safely within the Philippines!</p>
+    </footer>
+</body>
+</html>
